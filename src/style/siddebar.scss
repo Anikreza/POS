@@ -1,0 +1,43 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    background:#1F1D2B;
+    position: absolute;
+    width: 92px;
+    height: 99vh;
+    left: 0px;
+    top: 3px;
+    border-radius: 10px;
+    //.homeIcon{
+    //    img{
+    //        min-width: 100%;
+    //        margin-left: 0px;
+    //    }
+    //}
+    .iconActiveClass{
+        padding: 5px;
+        margin-left: 28px;
+        img{
+            width: 100%;
+        }
+        :hover{
+            filter:hue-rotate(-10deg);
+        }
+    }
+    .iconClass-ul{
+        background:#252836;
+        min-height: 50px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin-left: 10px;
+        padding: 0px 15px 0px 0px;
+        img{
+            width: 120%;
+        }
+        :hover{
+            filter:hue-rotate(-10deg);
+        }
+    }
+}
