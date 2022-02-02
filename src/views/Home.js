@@ -7,8 +7,17 @@ import RecipeData from "../data/Recipe";
 import Tabs from "../components/tabs/tabs";
 import CartItem from "../components/contents/cartItem";
 import Button from "../components/button/Button";
+import {useStateValue} from "../states/StateProvider";
 
 const Home = () => {
+
+    const [{user, basket, cart}, dispatch] = useStateValue();
+
+    useEffect(() => {
+        console.log(user)
+    }, [user]);
+
+
     return (
         <div className='home-Container'>
             <div className='home'>
@@ -69,7 +78,7 @@ const Home = () => {
                     <p>Discount <span>$0</span></p>
                     <p>SubTotal <span>$12.20</span></p>
                 </div>
-                <div style={{padding:'10px'}}>
+                <div style={{padding:'20px'}}>
                     <Button color={'white'} name={'Continue To Payment'} background={'#EA7C69'}/>
                 </div>
             </div>
