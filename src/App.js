@@ -13,8 +13,8 @@ function App() {
             <Router>
                 <Sidebar/>
                 <Routes>
-                    <Route path="/POS" element={ <Home data={RecipeData}/>} />
-                    <Route path="/categories/:key" element={ <Category/>} />
+                    <Route path="/POS" element={<Home data={RecipeData}/>}/>
+                    <Route path="/categories/:key" element={<Category/>}/>
                 </Routes>
             </Router>
 

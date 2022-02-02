@@ -9,7 +9,7 @@ const Button = (props) => {
     const disabled = '';
     const [{deliveryMethod}] = useStateValue();
 
-    function submit(){
+    function submit() {
         console.log('clicked')
         alert('under development')
     }
@@ -28,8 +28,6 @@ const Button = (props) => {
 }
 export default Button
 
-Button.propTypes={
-    background:PropTypes.string,
-    color:PropTypes.string,
-    name:PropTypes.string
+Button.propTypes = {
+    name: PropTypes.string
 }

@@ -14,13 +14,13 @@ import PropTypes from "prop-types";
 
 const Home = (props) => {
 
-    const [{deliveryMethod,basket,category}] = useStateValue();
-    const [state,setState]=useState(false)
+    const [{deliveryMethod, basket, category}] = useStateValue();
+    const [state, setState] = useState(false)
 
     useEffect(() => {
         setState(!state)
         console.log(category.title)
-    }, [basket,category]);
+    }, [basket, category]);
 
 
     return (
@@ -42,7 +42,7 @@ const Home = (props) => {
                 <h2>Orders #31212 </h2>
                 <div className='flex-row'>
                     {
-                        DeliveryMethod.map((method)=>(
+                        DeliveryMethod.map((method) => (
                             <li key={method.id}>
                                 <Tabs title={method.title} condition={deliveryMethod.title}/>
                             </li>
@@ -67,7 +67,7 @@ const Home = (props) => {
                 <CleanBasket/>
                 <div className='orderList'>
                     {
-                        Cart.map((item)=>(
+                        Cart.map((item) => (
                             <CartItem data={item}/>
                         ))
                     }
@@ -87,6 +87,6 @@ const Home = (props) => {
 
 export default Home
 
-Home.propTypes={
-    data:PropTypes.array
+Home.propTypes = {
+    data: PropTypes.array
 }

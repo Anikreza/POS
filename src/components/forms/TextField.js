@@ -15,7 +15,7 @@ const TextField = (props) => {
 
 export default TextField
 
-TextField.propTypes={
-    value:PropTypes.string,
-    placeholder:PropTypes.string
+TextField.propTypes = {
+    value: PropTypes.string,
+    placeholder: PropTypes.string
 }

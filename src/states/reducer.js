@@ -1,8 +1,8 @@
 export const initialState = {
     basket: [],
     user: {},
-    deliveryMethod:[],
-    category:{}
+    deliveryMethod: [],
+    category: {}
 };
 
 export const getBasketTotal = (basket) =>
@@ -14,14 +14,17 @@ const reducer = (state, action) => {
         case "ADD_TO_BASKET":
             return {
                 ...state,
-                basket: [action.item,...state.basket],
+                basket: [action.item, ...state.basket],
             };
 
         case "INCREMENT_QUANTITY":
             return {
                 ...state,
-                basket: state.basket.map(item=>item.productId===action.id? {...item,quantity:action.value}:item),
-                cart: state.cart.map(item=>item.productId===action.id? {...item,quantity:action.value}:item)
+                basket: state.basket.map(item => item.productId === action.id ? {
+                    ...item,
+                    quantity: action.value
+                } : item),
+                cart: state.cart.map(item => item.productId === action.id ? {...item, quantity: action.value} : item)
             };
 
         case 'EMPTY_BASKET':
@@ -31,7 +34,7 @@ const reducer = (state, action) => {
             };
 
         case "REMOVE_FROM_BASKET":
-            let newBasket= state.basket.filter(
+            let newBasket = state.basket.filter(
                 (basketItem) => basketItem.productId !== action.id
             );
             return {
@@ -44,12 +47,12 @@ const reducer = (state, action) => {
                 ...state,
                 user: action.item
             }
-            case "setCategory":
+        case "setCategory":
             return {
                 ...state,
                 category: action.item
             }
-            case "SetDeliveryMethod":
+        case "SetDeliveryMethod":
             return {
                 ...state,
                 deliveryMethod: action.item

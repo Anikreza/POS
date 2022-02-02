@@ -4,22 +4,23 @@ import {Link, useLocation} from "react-router-dom";
 
 const Categories = (props) => {
 
-    const url=useLocation();
-    const path=url.pathname.split('/').pop();
+    const url = useLocation();
+    const path = url.pathname.split('/').pop();
     const [{}, dispatch] = useStateValue();
 
-    function clickHandler(){
+    function clickHandler() {
         dispatch(
             {
                 type: "setCategory",
                 item: {
-                    title:props.keys
+                    title: props.keys
                 },
             })
     }
+
     return (
-        <div className={(path===props.keys)?'activeLink':'inActiveLink'}>
-            <Link to={`/categories/${props.keys}`}onClick={clickHandler}>
+        <div className={(path === props.keys) ? 'activeLink' : 'inActiveLink'}>
+            <Link to={`/categories/${props.keys}`} onClick={clickHandler}>
                 {props.keys}
             </Link>
             <hr/>

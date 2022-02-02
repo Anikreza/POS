@@ -1,6 +1,5 @@
 import React from "react";
 import '../../style/forms.scss';
-import PropTypes from "prop-types";
 import {useStateValue} from "../../states/StateProvider";
 import {DeliveryMethod} from "../../data/deliveryMethods";
 
@@ -38,7 +37,3 @@ const SelectOption = () => {
     )
 }
 export default SelectOption
-
-SelectOption.propTypes = {
-    title: PropTypes.string
-}
