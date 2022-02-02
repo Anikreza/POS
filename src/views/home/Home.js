@@ -10,6 +10,7 @@ import {getBasketTotal} from "../../states/reducer";
 import {useStateValue} from "../../states/StateProvider";
 import {DeliveryMethod} from "../../data/deliveryMethods";
 import CentralData from "./partial/centralData";
+import PropTypes from "prop-types";
 
 const Home = (props) => {
 
@@ -85,3 +86,7 @@ const Home = (props) => {
 }
 
 export default Home
+
+Home.propTypes={
+    data:PropTypes.array
+}

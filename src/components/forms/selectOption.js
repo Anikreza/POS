@@ -21,7 +21,7 @@ const SelectOption = () => {
                             },
                         })}
             >
-                <option style={{display: 'none'}}>Choose</option>
+                <option style={{display: 'none'}}>*Delivery Method</option>
                 {
                     DeliveryMethod.map((a) => (
                         <option
