@@ -1,11 +1,11 @@
 import React from "react";
 import Home from "../home/Home";
-import RecipeData from "../../data/Recipe";
+import CategoryData from "../../data/categoryData";
 
 const Category = () => {
     return (
         <div className='category'>
-            <Home data={RecipeData}/>
+            <Home data={CategoryData}/>
         </div>
     )
 }
