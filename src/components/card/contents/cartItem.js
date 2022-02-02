@@ -33,7 +33,7 @@ const CartItem = (props) => {
                 </div>
             </div>
             <div className='flex-row-form'>
-                   <TextField placeholder='Order Note...' value={''}/>
+                   <TextField placeholder='Order Note...'/>
                     <img onClick={()=>RemoveItem()} src={DeleteIcon} alt='DeleteIcon'/>
             </div>
         </div>

@@ -77,7 +77,7 @@ const Home = (props) => {
                     <p>SubTotal <span>${getBasketTotal(Cart).toFixed(2)}</span></p>
                 </div>
                 <div style={{padding: '20px'}}>
-                    <Button color={'white'} name={'Continue To Payment'} background={'#EA7C69'}/>
+                    <Button name={'Continue To Payment'}/>
                 </div>
             </div>
         </div>

@@ -14,7 +14,7 @@ function App() {
             <Router>
                 <Sidebar/>
                 <Routes>
-                    <Route path="/" element={ <Home data={RecipeData}/>} />
+                    <Route path="/POS" element={ <Home data={RecipeData}/>} />
                     <Route path="/categories/:key" element={ <Category/>} />
                     <Route path="/Restaurant" element={ <Tabs title={'Dine In'} active={true}/>} />
                 </Routes>

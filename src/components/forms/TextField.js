@@ -6,7 +6,7 @@ const TextField = (props) => {
         <div>
             <input
                 type={"text"}
-                value={props.value}
+                // value={props.value}
                 placeholder={props.placeholder}
             />
         </div>

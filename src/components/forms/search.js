@@ -9,7 +9,7 @@ const Search = (props) => {
             <input
                 onChange={formHandler}
                 type='search'
-                value=''
+                // value=''
                 placeholder='Search...'
             />
         </div>
