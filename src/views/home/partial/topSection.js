@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import Search from "../forms/search";
-import {CategoryInfo} from "../../data/categoryInfo";
-import Categories from "./categories";
+import Search from "../../../components/forms/search";
+import {CategoryInfo} from "../../../data/categoryInfo";
+import Categories from "../../../components/card/categories";
 
 const TopSection = () => {
 
@@ -19,7 +19,7 @@ const TopSection = () => {
                 <ul className='headerUl'>
                     {
                         CategoryInfo.map((type) => (
-                            <Categories keys={type.title}/>
+                            <Categories key={type.id} keys={type.title}/>
                         ))
                     }
                 </ul>

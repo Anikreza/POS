@@ -1,20 +1,26 @@
-import React from "react";
-import '../style/home.scss';
-import TopSection from "../components/card/topSection";
-import Dish from "../components/contents/dish";
-import RecipeData from "../data/Recipe";
-import Tabs from "../components/tabs/tabs";
-import CartItem from "../components/contents/cartItem";
-import Button from "../components/button/Button";
-import SelectOption from "../components/forms/selectOption";
-import {Cart, CleanBasket} from "../helpers/cleanBasket";
-import {getBasketTotal} from "../states/reducer";
-import {useStateValue} from "../states/StateProvider";
-import {DeliveryMethod} from "../data/deliveryMethods";
+import React, {useEffect, useState} from "react";
+import '../../style/home.scss';
+import TopSection from "./partial/topSection";
+import Tabs from "../../components/tabs/tabs";
+import CartItem from "../../components/card/contents/cartItem";
+import Button from "../../components/button/Button";
+import SelectOption from "../../components/forms/selectOption";
+import {Cart, CleanBasket} from "../../helpers/cleanBasket";
+import {getBasketTotal} from "../../states/reducer";
+import {useStateValue} from "../../states/StateProvider";
+import {DeliveryMethod} from "../../data/deliveryMethods";
+import CentralData from "./partial/centralData";
 
-const Home = () => {
+const Home = (props) => {
 
-    const [{deliveryMethod}] = useStateValue();
+    const [{deliveryMethod,basket,category}] = useStateValue();
+    const [state,setState]=useState(false)
+
+    useEffect(() => {
+        setState(!state)
+        console.log(category.title)
+    }, [basket,category]);
+
 
     return (
         <div className='home-Container'>
@@ -28,18 +34,7 @@ const Home = () => {
                     </li>
                 </div>
                 <div className='homeData'>
-                    <div className='row'>
-                        {
-                            RecipeData.map((data) => (
-                                <Dish
-                                    id={data.id}
-                                    data={data}
-                                    Admin={false}
-                                    Availability={'Bowls Available'}
-                                />
-                            ))
-                        }
-                    </div>
+                    <CentralData data={props.data}/>
                 </div>
             </div>
             <div className='homeRightSide'>
@@ -47,7 +42,7 @@ const Home = () => {
                 <div className='flex-row'>
                     {
                         DeliveryMethod.map((method)=>(
-                            <li id={method.id}>
+                            <li key={method.id}>
                                 <Tabs title={method.title} condition={deliveryMethod.title}/>
                             </li>
                         ))
@@ -79,7 +74,7 @@ const Home = () => {
                 <hr/>
                 <div className='orderSubmitTab'>
                     <p>Discount <span>$0</span></p>
-                    <p>SubTotal <span>{getBasketTotal(Cart).toFixed(2)}</span></p>
+                    <p>SubTotal <span>${getBasketTotal(Cart).toFixed(2)}</span></p>
                 </div>
                 <div style={{padding: '20px'}}>
                     <Button color={'white'} name={'Continue To Payment'} background={'#EA7C69'}/>

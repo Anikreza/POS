@@ -15,10 +15,20 @@
   }
 
   .userDesign {
+    margin-bottom: 40px;
     position: relative;
     width: 16vw;
+    height: 220px;
     z-index: 1;
     line-height: 3;
+
+    p{
+      font-size: 13px;
+      font-weight: 700;
+      color: #EA7C69;
+      margin-top: -17%;
+      position: static;
+    }
   }
 
   img {

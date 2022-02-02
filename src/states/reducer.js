@@ -2,13 +2,10 @@ export const initialState = {
     basket: [],
     cart:[],
     user: {name:'alex',id:2},
-    userDetail: {},
-    likeState:0,
-    dislikeState:0,
-    deliveryMethod:[]
+    deliveryMethod:[],
+    category:{}
 };
 
-// Selector
 export const getBasketTotal = (basket) =>
     basket?.reduce((amount, item) => (item.price * item.quantity) + amount, 0);
 
@@ -41,7 +38,7 @@ const reducer = (state, action) => {
 
         case "REMOVE_FROM_BASKET":
             let newBasket= state.basket.filter(
-                (basketItem) => basketItem.product_id !== action.id
+                (basketItem) => basketItem.productId !== action.id
             );
             return {
                 ...state,
@@ -53,25 +50,15 @@ const reducer = (state, action) => {
                 ...state,
                 user: action.item
             }
+            case "setCategory":
+            return {
+                ...state,
+                category: action.item
+            }
             case "SetDeliveryMethod":
             return {
                 ...state,
                 deliveryMethod: action.item
-            }
-            case "SET_USER_DETAIL":
-            return {
-                ...state,
-                userDetail: action.item
-            }
-        case "SET_LIKE":
-            return {
-                ...state,
-                likeState: action.item
-            }
-            case "SET_DISLIKE":
-            return {
-                ...state,
-                dislikeState: action.item
             }
         default:
             return state;

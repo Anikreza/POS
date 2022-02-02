@@ -1,19 +1,19 @@
-import React, {useEffect, useState} from "react";
-import '../../style/dish.scss';
+import React, {useState} from "react";
+import '../../../style/dish.scss';
 import PropTypes from "prop-types";
-import {useStateValue} from "../../states/StateProvider";
-import {CleanBasket,Cart} from "../../helpers/cleanBasket";
+import {useStateValue} from "../../../states/StateProvider";
+import {Cart} from "../../../helpers/cleanBasket";
 
 const Dish = (props) => {
 
-    const [{basket}, dispatch] = useStateValue();
+    const [{}, dispatch] = useStateValue();
     const [quantity, setQuantity] = useState(1)
+    const [error, setError] = useState('')
 
 
     function addToCart() {
         setQuantity(quantity + 1)
-        if (quantity <= props.data.stock)
-        {
+        if (quantity <= props.data.stock) {
             dispatch(
                 {
                     type: "ADD_TO_BASKET",
@@ -22,16 +22,15 @@ const Dish = (props) => {
                         productId: props.data.id,
                         title: props.data.title,
                         price: props.data.price,
-                        image:props.data.image,
-                        quantity:quantity
+                        image: props.data.image,
+                        quantity: quantity
                     },
                 })
-        }
-        else {
-            alert('out Of Stock')
+        } else {
+            setError('Maximum Added')
         }
 
-        console.log('data',Cart)
+        console.log('data', Cart)
     }
 
     return (
@@ -47,6 +46,12 @@ const Dish = (props) => {
                             <h4>${props.data.price}</h4>
                             <h5>{props.data.stock} {props.Availability}</h5>
                         </div>
+                        {
+                            (error) ?
+                                <p>{error}</p>
+                                :
+                                ''
+                        }
                         <div className={(props.Admin) ? 'editDish' : 'hidden'}>
                             <button>
                                 Edit Dish

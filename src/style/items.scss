@@ -18,19 +18,23 @@
 
       .space-between{
         display: flex;
-        margin-left: 30px;
+        margin-left: 20%;
       }
       h5{
         padding: 15px;
         background: $body-bg2;
         color: $appWhite;
         margin-top: 30%;
+        min-width: 15px;
+        max-width: 15px;
         border-radius: 8px;
       }
      p{
        margin-top: 45%;
        font-size: 13px;
        margin-left: 10px;
+       min-width: 20px;
+       max-width: 20px;
      }
     }
   }
@@ -39,11 +43,11 @@
     flex-direction: column;
     padding-left: 10px;
     margin-top: 10px;
-    max-width: fit-content;
+    width: 200px;
     p{
       font-size: 13px;
       text-align: left;
-      min-width: fit-content;
+      width: 200px;
       padding-bottom: 10px;
       margin-right: 10%;
     }
@@ -52,7 +56,6 @@
       text-align: left;
       margin-top: -6px;
       color: gray;
-      min-width: fit-content;
       margin-right: 10%;
     }
   }
@@ -63,7 +66,7 @@
     input{
       background: #2D303E;
       border-style: none;
-      height: 25px;
+      height: 28px;
       width: 302px;
       margin: 0px 10px 0 0 ;
       color: $appWhite;

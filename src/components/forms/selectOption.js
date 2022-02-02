@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import '../../style/forms.scss';
 import PropTypes from "prop-types";
 import {useStateValue} from "../../states/StateProvider";
@@ -7,9 +7,6 @@ import {DeliveryMethod} from "../../data/deliveryMethods";
 const SelectOption = () => {
 
     const [{deliveryMethod}, dispatch] = useStateValue();
-    useEffect(() => {
-        console.log(deliveryMethod)
-    }, [deliveryMethod]);
 
     return (
         <div className='dineIn'>
@@ -28,6 +25,7 @@ const SelectOption = () => {
                 {
                     DeliveryMethod.map((a) => (
                         <option
+                            key={a.id}
                             value={a.title}
                         >
                             {a.title}

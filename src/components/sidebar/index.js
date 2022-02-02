@@ -8,7 +8,7 @@ const sidebar = () => {
         <div className='sidebar'>
             {
                 Routes.map((route) =>
-                    <SidebarCard key={route.icon} activeIcon={route.activeIcon} icon={route.icon} path={route.path}/>
+                    <SidebarCard key={route.id} activeIcon={route.activeIcon} icon={route.icon} path={route.path}/>
                 )
             }
         </div>

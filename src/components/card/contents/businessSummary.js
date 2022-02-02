@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
-import '../../style/businessSummary.scss';
-import CoinIcon from "../../assets/icons/coinIcon";
-import ArrowUpIcon from "../../assets/icons/ArrowUpIcon";
-import ArrowDownIcon from "../../assets/icons/ArrowDownIcon";
+import '../../../style/businessSummary.scss';
+import CoinIcon from "../../../assets/icons/coinIcon";
+import ArrowUpIcon from "../../../assets/icons/ArrowUpIcon";
+import ArrowDownIcon from "../../../assets/icons/ArrowDownIcon";
 
 
 const businessSummary = (props) => {

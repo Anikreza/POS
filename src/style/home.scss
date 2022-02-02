@@ -35,7 +35,7 @@
     }
 
     .topSection {
-      padding: 5px 0 0 15px;
+      padding: 5px 16px 5px 25px;
       height: 14vh;
       text-align: left;
 
@@ -46,7 +46,7 @@
       }
 
       h2 {
-        padding: 5px;
+        padding-top: 5px;
         color: $offWhite;
         font-size: 14px;
         font-weight: 500;
@@ -76,10 +76,28 @@
           justify-content: space-between;
           max-width: 40vw;
 
-          li {
-            list-style: none;
-            color: $appWhite;
-            font-weight: 300;
+          .activeLink {
+            a {
+              text-decoration: none;
+              color: $theme;
+              font-weight: 600;
+            }
+
+            hr{
+              margin-top: 20px;
+              color: #EA7C69;
+              width: 35px;
+            }
+          }
+          .inActiveLink{
+            a{
+              text-decoration: none;
+              color: $appWhite;
+              font-weight: 300;
+            }
+            hr{
+              display: none;
+            }
           }
         }
       }
@@ -146,7 +164,7 @@
 
       .toRight {
         display: flex;
-        margin-left: 53%;
+        margin-left: 56%;
 
         li {
           padding-left: 12px;
