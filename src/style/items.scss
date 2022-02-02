@@ -1,53 +1,50 @@
+@import "../style/variables";
+
 .cartItems{
-  position: relative;
-  width: fit-content;
-  height: fit-content;
-  left: 0px;
-  top: 0px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 10px 10px;
-  //background: inherit;
-  background: #1F1D2B;
-  color: #e7e7e7;
+  width: 390px;
+  height: 160px;
+  margin: 10px 0px 0px 30px ;
+  background: inherit;
+  color: $appWhite;
 
   .flex-row{
     display: flex;
     img{
-      width: 30%;
+      margin-top: 5%;
+      width: 14%;
+      height: 14%;
     }
     .flex-sum-row{
 
       .space-between{
         display: flex;
-        float: right;
-        margin-right: 10%;
+        margin-left: 30px;
       }
       h5{
         padding: 15px;
-        background: #2D303E;
-        color: #eaeaea;
-        margin-top: 40%;
+        background: $body-bg2;
+        color: $appWhite;
+        margin-top: 30%;
         border-radius: 8px;
       }
      p{
        margin-top: 45%;
-       font-size: 20px;
-       margin-left: 20px;
+       font-size: 13px;
+       margin-left: 10px;
      }
     }
   }
   .flex-detail-column{
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
+    padding-left: 10px;
     margin-top: 10px;
     max-width: fit-content;
     p{
       font-size: 13px;
       text-align: left;
       min-width: fit-content;
+      padding-bottom: 10px;
       margin-right: 10%;
     }
     h1{
@@ -60,26 +57,24 @@
     }
   }
   .flex-row-form{
+    padding-left: 10px;
     display: flex;
-    position: relative;
-    top: -30px;
-    left: 34%;
 
     input{
       background: #2D303E;
       border-style: none;
       height: 25px;
-      width: 210px;
-      margin-right: 10px;
-      color: white;
-      padding: 8px;
+      width: 302px;
+      margin: 0px 10px 0 0 ;
+      color: $appWhite;
+      padding: 6px 6px 6px 15px;
       border-radius: 8px;
-      outline: #EA7C69;
+      outline: $theme;
     }
     img{
       cursor: pointer;
-      width: 35px;
-      height: 38px;
+      width: 30px;
+      height: 35px;
     }
   }
 }

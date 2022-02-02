@@ -2,7 +2,7 @@ import React from "react";
 import '../../style/items.scss';
 import '../../style/forms.scss';
 import TextField from "../forms/TextField";
-import DeleteIcon from '../../icons/Delete.png';
+import DeleteIcon from '../../assets/icons/Delete.png';
 import PropTypes from "prop-types";
 
 const cartItem = (props) => {

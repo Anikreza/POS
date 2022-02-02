@@ -1,0 +1,163 @@
+@import "variables";
+
+.home-Container {
+  display: flex;
+  background: $body-bg1;
+
+  hr {
+    height: 1px;
+    color: #424242;
+  }
+
+  .home {
+    position: relative;
+    left: 92px;
+    height: 100vh;
+    margin-right: 92px;
+    background: $body-bg2;
+    width: 75vw;
+
+    .topSection {
+      padding: 5px 0 0 15px;
+      height: 14vh;
+      text-align: left;
+
+      h1 {
+        font-size: 25px;
+        color: $appWhite;
+        font-weight: 500;
+      }
+
+      h2 {
+        padding: 5px;
+        color: $offWhite;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .rightSide {
+        float: right;
+        padding-right: 15px;
+
+        input {
+          margin-top: 10px;
+          background: #2D303E;
+          padding: 10px;
+          border-radius: 8px;
+          border-style: outset;
+          border-color: #2D303E;
+          color: $appWhite;
+        }
+      }
+
+      .header {
+        padding: 20px 0 0 0;
+        margin-left: -40px;
+
+        .headerUl {
+          display: flex;
+          justify-content: space-between;
+          max-width: 40vw;
+
+          li {
+            list-style: none;
+            color: $appWhite;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+    .homeData {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px;
+    }
+
+    .row {
+      margin: 1px 1px;
+    }
+
+    .row,
+    .row > .column {
+      padding: 0px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .content {
+      background: transparent;
+      padding: 12px;
+      border-style: hidden;
+      min-height: 250px;
+    }
+
+    .column {
+      float: left;
+      text-align: inherit;
+      width: 33%;
+      opacity: 1;
+    }
+  }
+
+  .homeRightSide {
+    padding: 15px;
+    width: 37vw;
+
+    h2 {
+      color: $appWhite;
+      text-align: left;
+      font-weight: 400;
+      font-size: 20px;
+      padding: 5px 0 0 35px;
+    }
+
+    .flex-row {
+      display: flex;
+      padding: 12px;
+
+      li {
+        list-style: none;
+        margin-left: 24px;
+        color: $appWhite;
+        font-weight: 300;
+      }
+
+      .toRight {
+        display: flex;
+        margin-left: 53%;
+
+        li {
+          padding-left: 12px;
+          color: $appWhite;
+        }
+      }
+    }
+
+    .orderList {
+      max-height: 58vh;
+      overflow-y: scroll;
+      scrollbar-width: none;
+    }
+
+    .orderSubmitTab {
+      padding: 10px 0 0 20px;
+      text-align: left;
+      p{
+        color: $offWhite;
+        font-weight: 300;
+        padding-top: 10px;
+      }
+      span{
+        float: right;
+        margin-right: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+
+}

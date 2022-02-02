@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import '../../style/button.scss';
 
 const Button = (props) => {
     return (
@@ -8,7 +9,6 @@ const Button = (props) => {
         </div>
     )
 }
-
 export default Button
 
 Button.propTypes={

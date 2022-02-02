@@ -1,18 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 import '../../style/forms.scss';
 import PropTypes from "prop-types";
 
-import {AiFillCaretDown} from "react-icons/ai"
-
 const DineIn = (props) => {
+
+    const [method, setMethod] = useState('');
+
     return (
         <div className='dineIn'>
-            <p><AiFillCaretDown/> {props.title}</p>
+            <select
+                value={method}
+                onChange={(e) => setMethod(e.target.value)}
+            >
+                <option style={{display: 'none'}}>Choose</option>
+                <option
+                    value={props.title}
+                >
+                    {props.title}
+                </option>
+            </select>
         </div>
     )
 }
-
 export default DineIn
-DineIn.propTypes={
-    title:PropTypes.string
+
+DineIn.propTypes = {
+    title: PropTypes.string
 }

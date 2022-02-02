@@ -1,56 +1,52 @@
-import HomeIcon from '../icons/sidebar/Home.png'
-import ActiveHomeIcon from '../icons/sidebar/HomeBig.png'
-import DashboardIcon from '../icons/sidebar/Dashboard.png'
-import ActiveDashboardIcon from '../icons/sidebar/DashboardBig.png'
-import DiscountIcon from '../icons/sidebar/Discount.png'
-import LogOutIcon from '../icons/sidebar/Log Out.png'
-import MessageIcon from '../icons/sidebar/Message.png'
-import NotificationIcon from '../icons/sidebar/Notification.png'
-import ActiveNotificationIcon from '../icons/sidebar/NotificationBig.png'
-import RestaurantIcon from '../icons/sidebar/Vector.png'
-import SettingIcon from '../icons/sidebar/Setting.png'
-import ActiveSettingIcon from '../icons/sidebar/SettingBig.png'
+import DashboardIcon from '../assets/icons/sidebar/DashboardIcon';
+import DiscountIcon from "../assets/icons/sidebar/DiscountIcon";
+import SettingsIcon from "../assets/icons/sidebar/SettingsIcon";
+import LogOutIcon from "../assets/icons/sidebar/LogOutIcon";
+import HomeIcon from "../assets/icons/sidebar/HomeIcon";
+import RestaurantIcon from "../assets/icons/sidebar/RestaurantIcon";
+import NotificationIcon from "../assets/icons/sidebar/Notiication";
+import MessageIcon from "../assets/icons/sidebar/MessageIcon";
 
 const Routes = [
     {
-        icon: RestaurantIcon,
-        path: 'Restaurant',
-        activeIcon: RestaurantIcon,
+        icon: <RestaurantIcon color={'#EA7C69'} width={'30'} height={'25'}/>,
+        path: '/Restaurant',
+        activeIcon: <RestaurantIcon color={'white'} width={'30'} height={'25'}/>
     },
     {
-        icon: HomeIcon,
-        activeIcon: ActiveHomeIcon,
-        path: 'home'
+        icon:<HomeIcon color={'#EA7C69'} width={'30'} height={'25'}/>,
+        activeIcon: <HomeIcon color={'white'} width={'30'} height={'25'}/>,
+        path: '/'
     },
     {
-        icon: DiscountIcon,
-        path: 'discount',
-        activeIcon: ActiveHomeIcon,
+        icon: <DiscountIcon color={'#EA7C69'} width={'30'} height={'25'}/>,
+        path: '/discount',
+        activeIcon: <DiscountIcon color={'white'} width={'30'} height={'25'}/>,
     },
     {
-        icon: DashboardIcon,
-        path: 'Dashboard',
-        activeIcon: ActiveDashboardIcon,
+        icon: <DashboardIcon color={'#EA7C69'} width={'30'} height={'25'}/>,
+        path: '/Dashboard',
+        activeIcon:<DashboardIcon color={'white'} width={'30'} height={'25'}/>,
     },
     {
-        icon: MessageIcon,
-        path: 'Message',
-        activeIcon: ActiveHomeIcon,
+        icon: <MessageIcon color={'#EA7C69'} width={'30'} height={'25'}/>,
+        path: '/Message',
+        activeIcon: <MessageIcon color={'white'} width={'30'} height={'25'}/>
     },
     {
-        icon: NotificationIcon,
-        path: 'Notification',
-        activeIcon: ActiveNotificationIcon,
+        icon: <NotificationIcon color={'#EA7C69'} width={'30'} height={'25'}/>,
+        path: '/Notification',
+        activeIcon: <NotificationIcon color={'white'} width={'30'} height={'25'}/>,
     },
     {
-        icon: SettingIcon,
-        path: 'Settings',
-        activeIcon: ActiveSettingIcon,
+        icon: <SettingsIcon color={'#EA7C69'} width={'30'} height={'25'}/>,
+        path: '/Settings',
+        activeIcon: <SettingsIcon color={'white'} width={'30'} height={'25'}/>,
     },
     {
-        icon: LogOutIcon,
-        path: 'LogOut',
-        activeIcon: ActiveHomeIcon,
+        icon: <LogOutIcon color={'#EA7C69'} width={'40'} height={'40'}/>,
+        path: '/LogOut',
+        activeIcon: <LogOutIcon color={'white'} width={'40'} height={'40'}/>,
     },
 ];
 
