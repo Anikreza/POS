@@ -6,17 +6,17 @@ import image5 from '../assets/images/Image5.png'
 
 const RecipeData = [
 
-    {title: 'Spicy seasoned seafood noodles', image: image1, price: 2.29, stock:20},
+    {id:1,title: 'Spicy seasoned seafood noodles', image: image1, price: 2.29, stock:20,type:'hot'},
 
-    {title: 'Salted Pasta with mushroom sauce', image: image2, price: 2.69, stock:32},
+    {id:2,title: 'Salted Pasta with mushroom sauce', image: image2, price: 2.69, stock:32,type:'grill'},
 
-    {title: 'Healthy noodle with spinach leaf', image: image3, price: 2.55, stock:25},
+    {id:3,title: 'Healthy noodle with spinach leaf', image: image3, price: 2.55, stock:25,type:'cold'},
 
-    {title: 'Hot spicy fried rice with omelets', image: image4, price: 3.29, stock:23},
+    {id:4,title: 'Hot spicy fried rice with omelets', image: image4, price: 3.29, stock:23,type:'soup'},
 
-    {title: 'Beef dumpling in hot and sour soup', image: image5, price: 3.89, stock:18},
+    {id:5,title: 'Beef dumpling in hot and sour soup', image: image5, price: 3.89, stock:18,type:'dessert'},
 
-    {title: 'Spicy instant noodle with special omelette', image: image2, price: 2.89, stock:10}
+    {id:6,title: 'Spicy instant noodle with special omelette', image: image2, price: 2.89, stock:10,type:'appetizer'}
 
 ];
 

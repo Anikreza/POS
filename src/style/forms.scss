@@ -3,11 +3,11 @@
 .dineIn{
   select{
     width: 120px;
-    height: 48px;
+    height: fit-content;
     box-sizing: border-box;
     border-radius: 8px;
     background: $body-bg1;
-    padding: 12px;
+    padding: 10px;
     border-style: none;
     color: $appWhite;
     font-size: 14px;

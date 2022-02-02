@@ -5,11 +5,12 @@ export const initialState = {
     userDetail: {},
     likeState:0,
     dislikeState:0,
+    deliveryMethod:[]
 };
 
 // Selector
 export const getBasketTotal = (basket) =>
-    basket?.reduce((amount, books) => (books.price * books.quantity) + amount, 0);
+    basket?.reduce((amount, item) => (item.price * item.quantity) + amount, 0);
 
 const reducer = (state, action) => {
     console.log(action);
@@ -28,16 +29,15 @@ const reducer = (state, action) => {
         case "INCREMENT_QUANTITY":
             return {
                 ...state,
-                basket: state.basket.map(item=>item.product_id===action.id? {...item,quantity:action.value}:item),
-                cart: state.cart.map(item=>item.product_id===action.id? {...item,quantity:action.value}:item)
+                basket: state.basket.map(item=>item.productId===action.id? {...item,quantity:action.value}:item),
+                cart: state.cart.map(item=>item.productId===action.id? {...item,quantity:action.value}:item)
             };
 
         case 'EMPTY_BASKET':
             return {
                 ...state,
                 basket: []
-            }
-
+            };
 
         case "REMOVE_FROM_BASKET":
             let newBasket= state.basket.filter(
@@ -52,6 +52,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 user: action.item
+            }
+            case "SetDeliveryMethod":
+            return {
+                ...state,
+                deliveryMethod: action.item
             }
             case "SET_USER_DETAIL":
             return {

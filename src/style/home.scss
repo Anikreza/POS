@@ -17,6 +17,23 @@
     background: $body-bg2;
     width: 75vw;
 
+    .flex-split {
+      display: flex;
+      padding-top: 25px;
+
+      h2 {
+        width: 200px;
+        color: $appWhite;
+        font-weight: 500;
+        font-size: 22px;
+      }
+
+      li {
+        list-style: none;
+        margin-left: 56%;
+      }
+    }
+
     .topSection {
       padding: 5px 0 0 15px;
       height: 14vh;
@@ -147,12 +164,14 @@
     .orderSubmitTab {
       padding: 10px 0 0 20px;
       text-align: left;
-      p{
+
+      p {
         color: $offWhite;
         font-weight: 300;
         padding-top: 10px;
       }
-      span{
+
+      span {
         float: right;
         margin-right: 20px;
         font-weight: 700;

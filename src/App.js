@@ -1,13 +1,8 @@
 import './App.css';
 import React from "react";
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Tabs from "./components/tabs/tabs";
 import Home from "./views/Home";
-import Dish from "./components/contents/dish";
-import RecipeData from "./data/Recipe";
-import CartItem from "./components/contents/cartItem";
-import MostOrdered from "./components/contents/mostOrdered";
-import BusinessSummary from "./components/contents/businessSummary";
 import Sidebar from "./components/sidebar";
 
 
@@ -25,7 +20,7 @@ function App() {
             {/*<AddMore color={'white'} background={'#EA7C69'} name={<AiOutlinePlus size='21px'/>}/>*/}
             {/*<br/>*/}
             {/*<Button color={'white'} name={'Confirm Payment Payment'} background={'#EA7C69'}/>*/}
-            {/*<DineIn title={'Dine In'}/>*/}
+            {/*<SelectOption title={'Dine In'}/>*/}
             {/*<CartItem data={RecipeData}/>*/}
             {/*<Dish data={RecipeData} Admin={true} Availability={'Bowls Available'}/>*/}
             {/*<Tabs title={'Dine In'} active={true}/>*/}

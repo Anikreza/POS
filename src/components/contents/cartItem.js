@@ -4,20 +4,23 @@ import '../../style/forms.scss';
 import TextField from "../forms/TextField";
 import DeleteIcon from '../../assets/icons/Delete.png';
 import PropTypes from "prop-types";
+import {getBasketTotal} from "../../states/reducer";
+import {useStateValue} from '../../states/StateProvider';
 
-const cartItem = (props) => {
+const CartItem = (props) => {
+
     return (
         <div className='cartItems'>
             <div className='flex-row'>
-                <img src={props.data[1].image}/>
+                <img src={props.data.image}/>
                 <div className='flex-detail-column'>
-                    <p>{props.data[0].title}</p>
-                    <h1>${props.data[0].price}</h1>
+                    <p>{props.data.title}</p>
+                    <h1>${props.data.price.toFixed(2)}</h1>
                 </div>
                 <div className='flex-sum-row'>
                     <div className='space-between'>
-                        <h5>2</h5>
-                        <p>$12.50</p>
+                        <h5>{props.data.quantity}</h5>
+                        <p>{(props.data.quantity*props.data.price).toFixed(2)}</p>
                     </div>
                 </div>
             </div>
@@ -29,8 +32,8 @@ const cartItem = (props) => {
     )
 }
 
-export default cartItem
+export default CartItem
 
-cartItem.propTypes={
+CartItem.propTypes={
     data:PropTypes.array,
 }
