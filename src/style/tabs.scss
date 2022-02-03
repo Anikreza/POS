@@ -3,18 +3,22 @@
 .tabs {
   min-width: max-content;
   .activeStyle {
-    padding: 6px;
+    padding: 8px;
     background: $theme;
     border-radius: 5px;
     color: $appWhite;
     font-weight: 600;
   }
   .normalStyle{
-    padding: 6px;
+    border-style: ridge;
+    border-width: thin;
+    border-color: #3d3d3d;
+    padding: 8px;
     background: $body-bg2;
     border-radius: 5px;
     color: $theme;
     font-weight: 600;
+    cursor: pointer;
   }
 }
 

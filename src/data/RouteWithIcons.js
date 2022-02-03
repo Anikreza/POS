@@ -52,9 +52,9 @@ const Routes = [
     },
     {
         id:7,
-        icon: <LogOutIcon color={'#EA7C69'} width={'40'} height={'40'}/>,
+        icon: <LogOutIcon color={'#EA7C69'} width={'40'} height={'25'}/>,
         path: '/LogOut',
-        activeIcon: <LogOutIcon color={'white'} width={'40'} height={'40'}/>,
+        activeIcon: <LogOutIcon color={'white'} width={'40'} height={'25'}/>,
     },
 ];
 

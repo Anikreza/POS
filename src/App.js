@@ -24,7 +24,7 @@ function App() {
             {/*<SelectOption title={'Dine In'}/>*/}
             {/*<CartItem data={RecipeData}/>*/}
             {/*<Dish data={RecipeData} Admin={true} Availability={'Bowls Available'}/>*/}
-            {/*<Tabs title={'Dine In'} active={true}/>*/}
+            {/*<Index title={'Dine In'} active={true}/>*/}
             {/*<MostOrdered data={RecipeData}/>*/}
             {/*<BusinessSummary data={RecipeData} title={'Total Revenue'}/>*/}
 

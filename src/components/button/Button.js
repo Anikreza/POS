@@ -7,11 +7,14 @@ import {useStateValue} from "../../states/StateProvider";
 const Button = (props) => {
 
     const disabled = '';
-    const [{deliveryMethod}] = useStateValue();
+    const [{deliveryMethod},dispatch] = useStateValue();
 
     function submit() {
-        console.log('clicked')
-        alert('under development')
+        dispatch(
+            {
+                type: "SetModal",
+                item: true
+            })
     }
 
     return (

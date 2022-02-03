@@ -2,7 +2,8 @@ export const initialState = {
     basket: [],
     user: {},
     deliveryMethod: [],
-    category: {}
+    category: {},
+    modal: false
 };
 
 export const getBasketTotal = (basket) =>
@@ -56,6 +57,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 deliveryMethod: action.item
+            }
+        case "SetModal":
+            return {
+                ...state,
+                modal: action.item
             }
         default:
             return state;
