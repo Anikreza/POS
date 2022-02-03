@@ -19,3 +19,21 @@
     font-weight: 600;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .tabs {
+    .activeStyle {
+      padding: 2px;
+      border-radius: 2px;
+      font-size: 10px;
+      width:40px;
+    }
+    .normalStyle{
+      padding: 2px;
+      background: $body-bg1;
+      border-radius: 2px;
+      width:50px;
+      font-size: 10px;
+    }
+  }
+}

@@ -36,4 +36,18 @@
 
 }
 
+@media screen and (max-width: 800px) {
 
+  .button {
+
+    .button-glow {
+      padding: 6px;
+    }
+
+    .button-dim {
+      padding: 6px;
+    }
+
+  }
+
+}

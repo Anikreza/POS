@@ -23,7 +23,7 @@ const Categories = (props) => {
             <Link to={`/categories/${props.keys}`} onClick={clickHandler}>
                 {props.keys}
             </Link>
-            <hr/>
+            <hr/><br/><br/>
         </div>
     )
 }

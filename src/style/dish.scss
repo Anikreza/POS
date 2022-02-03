@@ -85,3 +85,58 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 800px) {
+
+  .dish {
+    .adminDesign {
+    }
+    .userDesign {
+      margin-bottom: 0;
+      width: 100%;
+      line-height: 2.5;
+      position: relative;
+      z-index: 1;
+    }
+
+    img {
+      width: 60%;
+      height: 60%;
+    }
+
+    .container {
+      border-radius: 5px;
+      h3 {
+        font-size: 80%;
+
+      }
+      h4 {
+        font-size: 70%;
+      }
+
+      h5 {
+        font-size: 70%;
+      }
+    }
+
+    .editDish {
+      width: auto;
+      background: #503532;
+      padding: 10px;
+      margin-top: -10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      button {
+        background: inherit;
+        color: $appWhite;
+        opacity: .7;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+  }
+}
+
