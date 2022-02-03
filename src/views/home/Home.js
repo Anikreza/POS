@@ -40,7 +40,7 @@ const Home = (props) => {
             </div>
             <div className='homeRightSide'>
                 <h2>Orders #31212 </h2>
-                <div className='flex-row'>
+                <div className='flex-row-home'>
                     {
                         DeliveryMethod.map((method) => (
                             <li key={method.id}>
@@ -50,16 +50,16 @@ const Home = (props) => {
                     }
                 </div>
 
-                <div className='flex-row'>
+                <div className='flex-row-list'>
                     <li>
-                        <p>Item</p>
+                        Item
                     </li>
                     <div className='toRight'>
                         <li>
-                            <p>Qty</p>
+                            Qty
                         </li>
-                        <li>
-                            <p>Price</p>
+                        <li style={{marginLeft:'-25px'}}>
+                            Price
                         </li>
                     </div>
                 </div>

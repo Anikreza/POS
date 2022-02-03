@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const TextField = (props) => {
     return (
-        <div>
+        <div style={{width:'100%'}}>
             <input
                 type={"text"}
                 // value={props.value}
