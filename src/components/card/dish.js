@@ -3,15 +3,18 @@ import '../../style/dish.scss';
 import PropTypes from "prop-types";
 import {useStateValue} from "../../states/StateProvider";
 import {Cart} from "../../helpers/cleanBasket";
+import {useNavigate} from "react-router-dom";
 
 const Dish = (props) => {
 
     const [{}, dispatch] = useStateValue();
     const [quantity, setQuantity] = useState(1)
     const [error, setError] = useState('')
+    const navigate = useNavigate()
 
-    function editSubmission(){
-        console.log('admin edit')
+
+    function editSubmission() {
+        navigate(`/settings/dish/edit/${props.id}`)
     }
 
     function addToCart() {

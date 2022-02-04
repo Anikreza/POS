@@ -7,7 +7,7 @@ import {useStateValue} from "../../states/StateProvider";
 const Button = (props) => {
 
     const disabled = '';
-    const [{deliveryMethod},dispatch] = useStateValue();
+    const [{deliveryMethod}, dispatch] = useStateValue();
 
     function submit() {
         dispatch(
@@ -22,22 +22,22 @@ const Button = (props) => {
     return (
         <div className='button'>
             {
-               (!props.admin)?
-                   <button
-                       disabled={Cart.length > 0 && !props.cancel? disabled : !disabled}
-                       className={Cart.length > 0 && deliveryMethod.title && !props.cancel? 'button-glow' : 'button-dim'}
-                       onClick={submit}
-                   >
-                       {props.name}
-                   </button>
-                   :
-                   <button
-                       disabled={!props.cancel? disabled : !disabled}
-                       className={ !props.cancel? 'button-glow' : 'button-dim'}
-                       onClick={submit}
-                   >
-                       {props.name}
-                   </button>
+                (!props.admin) ?
+                    <button
+                        disabled={Cart.length > 0 ? disabled : !disabled}
+                        className={Cart.length > 0 && deliveryMethod.title && !props.cancel ? 'button-glow' : 'button-dim'}
+                        onClick={submit}
+                    >
+                        {props.name}
+                    </button>
+                    :
+                    <button
+                        disabled={!props.cancel ? disabled : !disabled}
+                        className={!props.cancel ? 'button-glow' : 'button-dim'}
+                        onClick={submit}
+                    >
+                        {props.name}
+                    </button>
             }
         </div>
     )
@@ -46,6 +46,6 @@ export default Button
 
 Button.propTypes = {
     name: PropTypes.string,
-    cancel:PropTypes.bool,
-    admin:PropTypes.bool
+    cancel: PropTypes.bool,
+    admin: PropTypes.bool
 }

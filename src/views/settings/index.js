@@ -30,7 +30,7 @@ const Settings = (props) => {
                 <div className='settingsRightSide'>
                     <TopSection admin={true}/>{
                     (props.page === 'home') ?
-                        <div className='homeData' onClick={()=>navigate('/addProduct')}>
+                        <div className='homeData'>
                             <CentralData data={data} admin={true}/>
                         </div>
                         :
@@ -40,7 +40,7 @@ const Settings = (props) => {
                 }
                 <div className='adminButtons'>
                     <Button name={'Cancel'} cancel={true} admin={true}/>
-                    <Button name={'Save Changes'} cancel={false} admin={true}/>
+                    <Button name={'Save Changes'} cancel={true} admin={true}/>
                 </div>
                 </div>
             </div>

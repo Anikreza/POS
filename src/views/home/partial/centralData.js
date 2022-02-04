@@ -18,6 +18,7 @@ const centralData = (props) => {
                 props.data.map((data) => (
                     <Dish
                         key={data.id}
+                        id={data.id}
                         data={data}
                         Admin={props.admin}
                         Availability={'Bowls Available'}
