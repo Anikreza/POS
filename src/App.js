@@ -15,6 +15,7 @@ function App() {
                 <Routes>
                     <Route path="/POS" element={<Home data={RecipeData}/>}/>
                     <Route path="/categories/:key" element={<Category/>}/>
+                    <Route path="/payment/:key" element={<Home data={RecipeData}/>}/>
                 </Routes>
             </Router>
 

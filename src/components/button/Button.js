@@ -15,13 +15,15 @@ const Button = (props) => {
                 type: "SetModal",
                 item: true
             })
+
+        console.log('clicked')
     }
 
     return (
         <div className='button'>
             <button
                 disabled={Cart.length > 0 ? disabled : !disabled}
-                className={Cart.length > 0 && deliveryMethod.title ? 'button-glow' : 'button-dim'}
+                className={Cart.length > 0 && deliveryMethod.title && props.cancel===false? 'button-glow' : 'button-dim'}
                 onClick={submit}
             >
                 {props.name}

@@ -3,7 +3,8 @@ export const initialState = {
     user: {},
     deliveryMethod: [],
     category: {},
-    modal: false
+    modal: false,
+    payMethod:0
 };
 
 export const getBasketTotal = (basket) =>
@@ -62,6 +63,11 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 modal: action.item
+            }
+            case "SetPayMethod":
+            return {
+                ...state,
+                payMethod: action.item
             }
         default:
             return state;

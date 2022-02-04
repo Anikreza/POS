@@ -3,7 +3,7 @@
 .home-Container {
   display: flex;
   background: $body-bg1;
-  //overflow-x: hidden;
+  overflow-x: hidden;
   min-height: 100vh;
 
   hr {
@@ -194,14 +194,13 @@
     }
 
     .orderList {
+      max-height: 57vh;
        width: 100%;
       overflow-y: scroll;
       scrollbar-width: none;
     }
 
     .orderSubmitTab {
-      overflow-y: scroll;
-      scrollbar-width: none;
       padding: 10px 0 0 20px;
       text-align: left;
       width: 95%;

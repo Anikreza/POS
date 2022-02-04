@@ -34,7 +34,7 @@ const Home = (props) => {
                     <CentralData data={props.data}/>
                 </div>
             </div>
-                <FullCart/>
+                <FullCart isThisForConfirmPayment={false}/>
             <ModalContent/>
         </div>
     )

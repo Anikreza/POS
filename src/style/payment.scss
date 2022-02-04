@@ -1,6 +1,199 @@
 @import "variables";
 
-.payment{
+
+.modalContainer {
+  background: $body-bg1;
+  border-radius: 240px;
+}
+
+.payment {
   width: 80vw;
   height: fit-content;
+  background: $body-bg1;
+
+  .homeRightSide {
+    padding: 15px;
+    width: 400px;
+
+    h1 {
+      color: $appWhite;
+      font-size: 23px;
+      font-weight: 400;
+    }
+
+    p {
+      color: $offWhite;
+      font-size: 13px;
+    }
+
+    .flex-row-list {
+      color: $offWhite;
+      width: 100%;
+      display: flex;
+      list-style: none;
+      padding-left: 10%;
+
+      .toRight {
+        margin-right: 5px;
+        display: flex;
+        margin-left: auto;
+
+        li {
+          padding-right: 47px;
+          color: $offWhite;
+        }
+      }
+    }
+
+    h2 {
+      color: $appWhite;
+      text-align: left;
+      font-weight: 400;
+      font-size: 20px;
+      padding: 5px 0 0 20px;
+    }
+
+    .flex-row-home {
+      width: 100%;
+      display: flex;
+      padding: 12px 12px 12px 4px;
+
+      li {
+        list-style: none;
+        margin-left: 14px;
+        color: $appWhite;
+        font-weight: 300;
+      }
+    }
+
+    .orderList {
+      min-height: 57vh;
+      max-height: 57vh;
+      width: 100%;
+      overflow-y: scroll;
+      scrollbar-width: none;
+    }
+
+    .orderSubmitTab {
+      padding: 10px 0 0 20px;
+      text-align: left;
+      width: 95%;
+
+      p {
+        color: $offWhite;
+        font-weight: 300;
+        padding-top: 10px;
+      }
+
+      span {
+        float: right;
+        margin-right: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+
+
+
+.billingInfo {
+  font-weight: 400;
+  padding: 30px;
+  width: 400px;
+  border-left-style: ridge;
+  border-color: #2D303E;
+
+  .billingHeader {
+    height: 8.5vh;
+    padding-left: 10px;
+
+    h2 {
+      color: $appWhite;
+      font-size: 23px;
+      font-weight: 400;
+    }
+
+    p {
+      color: $offWhite;
+      font-size: 13px;
+    }
+  }
+
+  .billingContainer {
+    h2 {
+      padding: 20px 0px 0px 10px;
+      color: $appWhite;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .paymentIcons {
+      padding: 20px 10px 10px 10px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 50%;
+
+      .payIcon {
+        cursor: pointer;
+        list-style: none;
+        padding: 8px 18px 8px 18px;
+        border-radius: 8px;
+        border-style: ridge;
+        border-width: thin;
+        border-color: $offWhite;
+        background: $body-bg1;
+      }
+
+      .activePayIcon {
+        cursor: pointer;
+        list-style: none;
+        padding: 8px 18px 8px 18px;
+        border-radius: 8px;
+        border-style: ridge;
+        border-width: thin;
+        border-color: $offWhite;
+        background: $body-bg2;
+      }
+    }
+  }
+}
+
+.cardPay {
+  hr {
+    width: 105%;
+    margin-left: 10px;
+    color: #414141;
+  }
+
+  p {
+    padding: 10px 10px 5px 10px;
+    color: $appWhite;
+    font-size: 13px;
+  }
+
+  input {
+    margin: 5px;
+    border-style: none;
+    width: 100%;
+    padding: 11px;
+    border-radius: 8px;
+    color: $offWhite;
+    background: $body-bg2;
+  }
+
+  .flex-columnPay {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .confirmPay {
+    width: 100%;
+    display: flex;
+
+    .button {
+      min-width: 50%;
+      margin-left: 10px;
+    }
+  }
 }
