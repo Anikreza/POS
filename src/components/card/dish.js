@@ -10,6 +10,9 @@ const Dish = (props) => {
     const [quantity, setQuantity] = useState(1)
     const [error, setError] = useState('')
 
+    function editSubmission(){
+        console.log('admin edit')
+    }
 
     function addToCart() {
         setQuantity(quantity + 1)
@@ -34,29 +37,31 @@ const Dish = (props) => {
     }
 
     return (
-                <div className='dish'
-                     onClick={() => addToCart()}
-                >
-                    <div className={(props.Admin === true) ? 'adminDesign' : 'userDesign'}>
-                        <img src={props.data.image} alt='product'/>
-                        <div className='container'>
-                            <h3>{props.data.title}</h3>
-                            <h4>${props.data.price}</h4>
-                            <h5>{props.data.stock} {props.Availability}</h5>
-                        </div>
-                        {
-                            (error) ?
-                                <p>{error}</p>
-                                :
-                                ''
-                        }
-                        <div className={(props.Admin) ? 'editDish' : 'hidden'}>
-                            <button>
-                                Edit Dish
-                            </button>
-                        </div>
-                    </div>
+        <div className='dish'
+             onClick={() => addToCart()}
+        >
+            <div className={(props.Admin === true) ? 'adminDesign' : 'userDesign'}>
+                <img src={props.data.image} alt='product'/>
+                <div className='container'>
+                    <h3>{props.data.title}</h3>
+                    <h4>${props.data.price}</h4>
+                    <h5>{props.data.stock} {props.Availability}</h5>
                 </div>
+                {
+                    (error) ?
+                        <p>{error}</p>
+                        :
+                        ''
+                }
+                <div className={(props.Admin) ? 'editDish' : 'hidden'}>
+                    <button
+                        onClick={editSubmission}
+                    >
+                        Edit Dish
+                    </button>
+                </div>
+            </div>
+        </div>
     )
 }
 
