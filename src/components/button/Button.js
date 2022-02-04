@@ -21,18 +21,31 @@ const Button = (props) => {
 
     return (
         <div className='button'>
-            <button
-                disabled={Cart.length > 0 ? disabled : !disabled}
-                className={Cart.length > 0 && deliveryMethod.title && props.cancel===false? 'button-glow' : 'button-dim'}
-                onClick={submit}
-            >
-                {props.name}
-            </button>
+            {
+               (!props.admin)?
+                   <button
+                       disabled={Cart.length > 0 && !props.cancel? disabled : !disabled}
+                       className={Cart.length > 0 && deliveryMethod.title && !props.cancel? 'button-glow' : 'button-dim'}
+                       onClick={submit}
+                   >
+                       {props.name}
+                   </button>
+                   :
+                   <button
+                       disabled={!props.cancel? disabled : !disabled}
+                       className={ !props.cancel? 'button-glow' : 'button-dim'}
+                       onClick={submit}
+                   >
+                       {props.name}
+                   </button>
+            }
         </div>
     )
 }
 export default Button
 
 Button.propTypes = {
-    name: PropTypes.string
+    name: PropTypes.string,
+    cancel:PropTypes.bool,
+    admin:PropTypes.bool
 }

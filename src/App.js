@@ -2,9 +2,12 @@ import './App.css';
 import React from "react";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Home from "./views/home/Home";
-import Sidebar from "./components/sidebar";
-import Category from "./views/categories";
+import Sidebar from "./views/home/partial/sidebar";
+import Category from "./views/categories/userCategory";
 import RecipeData from "./data/Recipe";
+import Settings from "./views/settings";
+import CategoryData from "./data/categoryData";
+import CategoryAdmin from "./views/categories/adminCategory";
 
 
 function App() {
@@ -13,9 +16,11 @@ function App() {
             <Router>
                 <Sidebar/>
                 <Routes>
-                    <Route path="/POS" element={<Home data={RecipeData}/>}/>
+                    <Route exact path="/POS" element={<Home page={'home'} data={[]}/>}/>
                     <Route path="/categories/:key" element={<Category/>}/>
-                    <Route path="/payment/:key" element={<Home data={RecipeData}/>}/>
+                    <Route path="/settings/categories/:key" element={<CategoryAdmin/>}/>
+                    <Route path="/Settings" element={<Settings page={'home'} data={[]}/>}/>
+                    <Route path="/payment/:key" element={<Home/>}/>
                 </Routes>
             </Router>
 

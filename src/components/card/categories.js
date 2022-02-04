@@ -20,9 +20,17 @@ const Categories = (props) => {
 
     return (
         <div className={(path === props.keys) ? 'activeLink' : 'inActiveLink'}>
-            <Link to={`/categories/${props.keys}`} onClick={clickHandler}>
-                {props.keys}
-            </Link>
+            {
+                (props.admin)?
+                    <Link to={`/settings/categories/${props.keys}`} onClick={clickHandler}>
+                        {props.keys}
+                    </Link>
+                    :
+                    <Link to={`/categories/${props.keys}`} onClick={clickHandler}>
+                        {props.keys}
+                    </Link>
+            }
+
             <hr/><br/><br/>
         </div>
     )

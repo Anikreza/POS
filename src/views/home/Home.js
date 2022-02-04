@@ -4,25 +4,30 @@ import TopSection from "./partial/topSection";
 import SelectOption from "../../components/forms/selectOption";
 import {useStateValue} from "../../states/StateProvider";
 import CentralData from "./partial/centralData";
-import PropTypes from "prop-types";
 import ModalContent from "../../components/modal";
-import FullCart from "../../components/card/contents/fullCart";
+import FullCart from "../../components/contents/fullCart";
+import '../../style/rowColumnStyle.scss';
+import PropTypes from "prop-types";
+import RecipeData from "../../data/Recipe";
 
 const Home = (props) => {
 
 
-    const [{basket, category,modal}] = useStateValue();
+    const [{basket, category, modal}] = useStateValue();
     const [state, setState] = useState(false)
+    const [data, setData] = useState([])
 
     useEffect(() => {
         setState(!state)
-    }, [basket, category,modal]);
+        //callback function for the api call for all data
+        setData(RecipeData)
+    }, [basket, category]);
 
 
     return (
         <div className='home-Container'>
             <div className='home'>
-                <TopSection/>
+                <TopSection admin={false}/>
                 <hr/>
                 <div className='flex-split'>
                     <h2>Choose Dishes</h2>
@@ -30,11 +35,19 @@ const Home = (props) => {
                         <SelectOption/>
                     </li>
                 </div>
-                <div className='homeData'>
-                    <CentralData data={props.data}/>
-                </div>
+                {
+                    (props.page === 'home') ?
+                        <div className='homeData'>
+                            <CentralData data={data} admin={false}/>
+                        </div>
+                        :
+                        <div className='homeData'>
+                            <CentralData data={props.data} admin={false} />
+                        </div>
+                }
+
             </div>
-                <FullCart isThisForConfirmPayment={false}/>
+            <FullCart isThisForConfirmPayment={false}/>
             <ModalContent/>
         </div>
     )
@@ -43,5 +56,5 @@ const Home = (props) => {
 export default Home
 
 Home.propTypes = {
-    data: PropTypes.array
+    page: PropTypes.string
 }

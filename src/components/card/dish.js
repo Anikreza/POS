@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import '../../../style/dish.scss';
+import '../../style/dish.scss';
 import PropTypes from "prop-types";
-import {useStateValue} from "../../../states/StateProvider";
-import {Cart} from "../../../helpers/cleanBasket";
+import {useStateValue} from "../../states/StateProvider";
+import {Cart} from "../../helpers/cleanBasket";
 
 const Dish = (props) => {
 
@@ -34,8 +34,6 @@ const Dish = (props) => {
     }
 
     return (
-        <div className='column'>
-            <div className='content'>
                 <div className='dish'
                      onClick={() => addToCart()}
                 >
@@ -59,8 +57,6 @@ const Dish = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     )
 }
 

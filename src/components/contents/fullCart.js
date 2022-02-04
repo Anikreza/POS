@@ -1,12 +1,12 @@
 import React from "react";
-import {DeliveryMethod} from "../../../data/deliveryMethods";
-import {Cart, CleanBasket} from "../../../helpers/cleanBasket";
-import CartItem from "./cartItem";
-import {getBasketTotal} from "../../../states/reducer";
-import Button from "../../button/Button";
-import {useStateValue} from "../../../states/StateProvider";
+import {DeliveryMethod} from "../../data/deliveryMethods";
+import {Cart, CleanBasket} from "../../helpers/cleanBasket";
+import CartItem from "../card/cart/cartItem";
+import {getBasketTotal} from "../../states/reducer";
+import Button from "../button/Button";
+import {useStateValue} from "../../states/StateProvider";
 import PropTypes from "prop-types";
-import Tabs from "../../tabs";
+import Tabs from "../tabs";
 
 const FullCart = (props) => {
 
@@ -63,7 +63,7 @@ const FullCart = (props) => {
             <div style={{padding: '20px'}}>
                 {
                     (!props.isThisForConfirmPayment) ?
-                        <Button name={'Continue To Payment'} cancel={false}/>
+                        <Button name={'Continue To Payment'} cancel={false} admin={false}/>
                         :
                         ''
                 }

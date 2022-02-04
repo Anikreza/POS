@@ -5,19 +5,23 @@
   cursor: pointer;
 
   .adminDesign {
-    width: fit-content;
+    width: 200px;
+    height: fit-content;
     z-index: 0;
     position: relative;
     background: $body-bg1;
     border-radius: 10px;
     padding-top: 10px;
     line-height: 3;
+    border-style: ridge;
+    border-width: thin;
+    border-color: $borderColor;
   }
 
   .userDesign {
     margin-bottom: 40px;
     position: relative;
-    width: 16vw;
+    width: 18vw;
     height: fit-content;
     z-index: 0;
     line-height: 3;
@@ -68,7 +72,7 @@
 
   .editDish {
     width: auto;
-    background: #503532;
+    background: $darkTheme;
     padding: 10px;
     margin-top: -10px;
     border-bottom-right-radius: 10px;

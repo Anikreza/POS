@@ -36,136 +36,30 @@
       }
     }
 
-    .topSection {
-      padding: 5px 36px 5px 25px;
-      height: 14vh;
-      text-align: left;
-
-      .dropDownIcon {
-        display: none;
-
-      }
-
-      .hide {
-        display: none;
-      }
-
-      h1 {
-        font-size: 25px;
-        color: $appWhite;
-        font-weight: 500;
-      }
-
-      h2 {
-        padding-top: 5px;
-        color: $offWhite;
-        font-size: 14px;
-        font-weight: 500;
-      }
-
-      .rightSide {
-        float: right;
-        padding-right: 15px;
-
-        input {
-          margin-top: 10px;
-          background: #2D303E;
-          padding: 10px;
-          border-radius: 8px;
-          border-style: outset;
-          border-color: #2D303E;
-          color: $appWhite;
-        }
-      }
-
-      .header {
-        padding: 20px 0 0 0;
-        margin-left: -40px;
-
-        .headerUl {
-          display: flex;
-          justify-content: space-between;
-          max-width: 40vw;
-
-          .activeLink {
-            a {
-              text-decoration: none;
-              color: $theme;
-              font-weight: 600;
-            }
-
-            hr {
-              margin-top: 20px;
-              color: #EA7C69;
-              width: 35px;
-            }
-          }
-
-          .inActiveLink {
-            a {
-              text-decoration: none;
-              color: $appWhite;
-              font-weight: 300;
-            }
-
-            hr {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-
     .homeData {
       display: flex;
       justify-content: space-between;
       padding: 0;
-    }
-
-    .row {
-      margin: 1px 1px;
-    }
-
-    .row,
-    .row > .column {
-      padding: 0;
-    }
-
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    .content {
-      background: transparent;
-      padding: 12px;
-      border-style: hidden;
-      min-height: 250px;
-    }
-
-    .column {
-      float: left;
-      text-align: inherit;
-      width: 33%;
-      opacity: 1;
     }
   }
 
   .homeRightSide {
     padding: 15px;
     width: 400px;
-    .flex-row-list{
+
+    .flex-row-list {
       color: $offWhite;
       width: 100%;
       display: flex;
       list-style: none;
       padding-left: 10%;
-      .toRight{
+
+      .toRight {
         margin-right: 5px;
         display: flex;
         margin-left: auto;
-        li{
+
+        li {
           padding-right: 47px;
           color: $offWhite;
         }
@@ -195,7 +89,7 @@
 
     .orderList {
       max-height: 57vh;
-       width: 100%;
+      width: 100%;
       overflow-y: scroll;
       scrollbar-width: none;
     }
@@ -218,10 +112,113 @@
       }
     }
   }
-
 }
 
-@media screen and (min-width: 1920px){
+.topSection {
+  padding: 5px 36px 5px 25px;
+  height: 14vh;
+  text-align: left;
+
+  .dropDownIcon {
+    display: none;
+
+  }
+
+  .hide {
+    display: none;
+  }
+
+  h1 {
+    font-size: 25px;
+    color: $appWhite;
+    font-weight: 500;
+  }
+
+  h2 {
+    padding-top: 5px;
+    color: $offWhite;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  h3 {
+    padding: 30px 30px 30px 0;
+    color: $appWhite;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .rightSide {
+    float: right;
+    padding-right: 15px;
+
+    button {
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 8px;
+      background: $body-bg1;
+      color: $appWhite;
+      border-style: ridge;
+      border-width: thin;
+      border-color: #68696c;
+      padding: 10px;
+    }
+
+    button:hover {
+      color: $theme;
+      opacity: .8;
+    }
+
+    input {
+      margin-top: 10px;
+      background: #2D303E;
+      padding: 10px;
+      border-radius: 8px;
+      border-style: outset;
+      border-color: #2D303E;
+      color: $appWhite;
+    }
+  }
+
+  .header {
+    padding: 20px 0 0 0;
+    margin-left: -40px;
+
+    .headerUl {
+      display: flex;
+      justify-content: space-between;
+      max-width: 40vw;
+
+      .activeLink {
+        a {
+          text-decoration: none;
+          color: $theme;
+          font-weight: 600;
+        }
+
+        hr {
+          margin-top: 20px;
+          color: #EA7C69;
+          width: 35px;
+        }
+      }
+
+      .inActiveLink {
+        a {
+          text-decoration: none;
+          color: $appWhite;
+          font-weight: 300;
+        }
+
+        hr {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
   .home-Container {
     .home {
       .topSection {
@@ -230,11 +227,13 @@
     }
   }
 }
-@media screen and (min-width: 3840px){
+
+@media screen and (min-width: 3840px) {
   .home-Container {
     .home {
       .topSection {
         height: 6vh;
+
         .header {
           padding: 20px 0 0 0;
           margin-left: -40px;

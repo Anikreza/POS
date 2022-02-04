@@ -6,12 +6,12 @@ import {MdKeyboardBackspace} from "react-icons/md";
 
 const ModalContent = () => {
 
-    const [{modal},dispatch] = useStateValue();
+    const [{modal}, dispatch] = useStateValue();
 
     function closeModal() {
         dispatch({
-            type:"SetModal",
-            item:false
+            type: "SetModal",
+            item: false
         })
     }
 
@@ -24,7 +24,7 @@ const ModalContent = () => {
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#1F1D2BFF',
-            overflow:'scroll'
+            overflow: 'scroll'
         },
     };
 
@@ -36,10 +36,10 @@ const ModalContent = () => {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <div style={{cursor:'pointer', marginLeft:'30px'}}>
-                    <MdKeyboardBackspace onClick={closeModal} color='white' size='25px' />
+                <div style={{cursor: 'pointer', marginLeft: '30px'}}>
+                    <MdKeyboardBackspace onClick={closeModal} color='white' size='25px'/>
                 </div>
-               <PaymentPopUp/>
+                <PaymentPopUp/>
             </Modal>
         </div>
     )

@@ -1,7 +1,7 @@
 import React from "react";
-import '../../style/sidebar.scss'
-import SidebarCard from "../card/sidebarCard";
-import {Routes} from "../../data/RouteWithIcons";
+import '../../../../style/sidebar.scss'
+import SidebarCard from "../../../../components/card/sidebarCard";
+import {Routes} from "../../../../data/RouteWithIcons";
 
 const sidebar = () => {
     return (
