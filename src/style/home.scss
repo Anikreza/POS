@@ -5,6 +5,7 @@
   background: $body-bg1;
   overflow-x: hidden;
   min-height: 100vh;
+  font-size: 1vw;
 
   hr {
     height: 1px;
@@ -48,18 +49,19 @@
 
 .homeRightSide {
 
-  width: auto;
+  width: 36%;
+  padding: 30px;
 
   .flex-row-list {
+    font-size: 1vw;
     color: $offWhite;
     width: auto;
     display: flex;
     list-style: none;
-    padding-left: 6%;
     padding-bottom: 10px;
 
     .toRight {
-      margin-right: 5px;
+      margin-right: .6vw;
       display: flex;
       margin-left: auto;
 
@@ -75,18 +77,17 @@
     color: $appWhite;
     text-align: left;
     font-weight: 400;
-    font-size: 20px;
-    padding: 2.1% 0 0 5%;
+    font-size: 3vh;
+    padding: 2.1% 0 0 0;
   }
 
   .flex-row-home {
     width: 100%;
     display: flex;
-    padding: 12px 12px 12px 4px;
+    padding: 12px 12px 12px 0;
 
     li {
       list-style: none;
-      margin-left: 14px;
       color: $appWhite;
       font-weight: 300;
     }
@@ -100,9 +101,9 @@
   }
 
   .orderSubmitTab {
-    padding: 10px 0 0 20px;
+    padding: 10px 0 0 0;
     text-align: left;
-    width: 98%;
+    width: 100%;
 
     p {
       color: $offWhite;
@@ -112,7 +113,7 @@
 
     span {
       float: right;
-      margin-right: 20px;
+      margin-right: 10px;
       font-weight: 700;
     }
   }
