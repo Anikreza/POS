@@ -10,31 +10,40 @@ const CartItem = (props) => {
 
     const [{}, dispatch] = useStateValue();
 
-    function RemoveItem(){
+    function RemoveItem() {
         dispatch({
             type: "REMOVE_FROM_BASKET",
             quantity: props.data.quantity,
             id: props.data.productId
         });
     }
+
     return (
         <div className='cartItems'>
-            <div className='flex-row'>
-                <img src={props.data.image}/>
-                <div className='flex-detail-column'>
-                    <p>{props.data.title}</p>
-                    <h1>${props.data.price.toFixed(2)}</h1>
+            <div className='cartItemsContainer'>
+
+                <div className='left'>
+                    <div style={{display: 'flex'}}>
+                        <img src={props.data.image}/>
+                        <div>
+                            <p>{props.data.title}</p>
+                            <h1>${props.data.price.toFixed(2)}</h1>
+                        </div>
+                    </div>
+
                 </div>
-                <div className='flex-sum-row'>
-                    <div className='space-between'>
+
+                <div className='flex-sum-row-right'>
+                    <div style={{display:'flex'}}>
                         <h5>{props.data.quantity}</h5>
-                        <p>${(props.data.quantity*props.data.price).toFixed(2)}</p>
+                        <h2>${(props.data.quantity * props.data.price).toFixed(2)}</h2>
                     </div>
                 </div>
             </div>
+
             <div className='flex-row-form'>
-                   <TextField placeholder='Order Note...'/>
-                    <img onClick={()=>RemoveItem()} src={DeleteIcon} alt='DeleteIcon'/>
+                <TextField placeholder='Order Note...'/>
+                <img onClick={() => RemoveItem()} src={DeleteIcon} alt='DeleteIcon'/>
             </div>
         </div>
     )
@@ -42,6 +51,6 @@ const CartItem = (props) => {
 
 export default CartItem
 
-CartItem.propTypes={
-    data:PropTypes.array,
+CartItem.propTypes = {
+    data: PropTypes.array,
 }

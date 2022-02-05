@@ -41,7 +41,7 @@ const FullCart = (props) => {
                     <li>
                         Qty
                     </li>
-                    <li style={{marginLeft: '-25px'}}>
+                    <li>
                         Price
                     </li>
                 </div>
