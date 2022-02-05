@@ -22,6 +22,6 @@ export default AddMore
 
 AddMore.propTypes={
     color:PropTypes.string,
-    name:PropTypes.element,
+    name:PropTypes.string,
     background:PropTypes.string
 }

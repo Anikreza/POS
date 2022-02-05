@@ -52,5 +52,5 @@ const CartItem = (props) => {
 export default CartItem
 
 CartItem.propTypes = {
-    data: PropTypes.array,
+    data: PropTypes.object,
 }

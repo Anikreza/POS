@@ -5,9 +5,9 @@ import AddMore from "../../../components/button/AddMore";
 
 const centralData = (props) => {
     return (
-        <div className={(props.admin)?'grid-container-admin':'grid-container'}>
+        <div className={(props.admin) ? 'grid-container-admin' : 'grid-container'}>
             {
-                (props.admin)?
+                (props.admin) ?
                     <div className='addDish'>
                         <AddMore color={'#EA7C69'} name='Add More Dish' background={'inherit'}/>
                     </div>
@@ -30,7 +30,7 @@ const centralData = (props) => {
 }
 export default centralData
 
-centralData.propTypes={
-    data:PropTypes.array,
-    admin:PropTypes.bool
+centralData.propTypes = {
+    data: PropTypes.array,
+    admin: PropTypes.bool
 }

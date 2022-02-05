@@ -51,7 +51,7 @@ const FullCart = (props) => {
             <div className='orderList'>
                 {
                     Cart.map((item) => (
-                        <CartItem data={item}/>
+                        <CartItem key={item.title} data={item}/>
                     ))
                 }
             </div>

@@ -102,6 +102,9 @@
     overflow-y: scroll;
     scrollbar-width: none;
   }
+  .orderList::-webkit-scrollbar {
+    display: none;
+  }
 
   .orderSubmitTab {
     padding: 10px 0 0 0;
@@ -165,7 +168,7 @@
       border-radius: 8px;
       background: $body-bg1;
       color: $appWhite;
-      border-style: ridge;
+      border-style: solid;
       border-width: thin;
       border-color: #68696c;
       padding: 10px;
@@ -340,7 +343,7 @@
             width: 70px;
             margin-top: 0;
             padding: 5px;
-            border-style: ridge;
+            border-style: solid;
           }
         }
 

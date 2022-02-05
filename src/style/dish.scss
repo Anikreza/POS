@@ -13,7 +13,7 @@
     border-radius: 10px;
     padding-top: 10px;
     line-height: 3;
-    border-style: ridge;
+    border-style: solid;
     border-width: thin;
     border-color: $borderColor;
   }
@@ -21,18 +21,10 @@
   .userDesign {
     margin-bottom: 40px;
     position: relative;
-    width: 18.5vw;
+    width: 17vw;
     height: fit-content;
     z-index: 0;
     line-height: 3;
-
-    p{
-      font-size: 13px;
-      font-weight: 700;
-      color: #EA7C69;
-      margin-top: -17%;
-      position: static;
-    }
   }
 
   img {
@@ -51,8 +43,7 @@
     h3 {
       font-weight: 500;
       color: $appWhite;
-      width: 100%;
-      font-size: 100%;
+      width: auto;
       line-height: 1;
 
     }
@@ -65,7 +56,7 @@
 
     h5 {
       color: $offWhite;
-      font-size: 80%;
+      font-size: 90%;
       font-weight: 400;
     }
   }

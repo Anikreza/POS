@@ -6,17 +6,14 @@ import '../../style/rowColumnStyle.scss';
 import TopSection from "../home/partial/topSection";
 import PropTypes from "prop-types";
 import SettingsOptions from "./partial/settingsOptions";
-import AddMore from "../../components/button/AddMore";
-import {useNavigate} from "react-router-dom";
 import Button from "../../components/button/Button";
 
 const Settings = (props) => {
 
     const [data, setData] = useState([])
-    const navigate=useNavigate()
 
     useEffect(() => {
-        //callback function for the api call for all data
+        //callback function for the api call to get all data
         setData(RecipeData)
     }, []);
 
@@ -28,20 +25,17 @@ const Settings = (props) => {
                     <SettingsOptions/>
                 </div>
                 <div className='settingsRightSide'>
-                    <TopSection admin={true}/>{
-                    (props.page === 'home') ?
-                        <div className='homeData'>
+                    <TopSection admin={true}/>
+                    {
+                        (props.page === 'home') ?
                             <CentralData data={data} admin={true}/>
-                        </div>
-                        :
-                        <div className='homeData'>
+                            :
                             <CentralData data={props.data} admin={true}/>
-                        </div>
-                }
-                <div className='adminButtons'>
-                    <Button name={'Cancel'} cancel={true} admin={true}/>
-                    <Button name={'Save Changes'} cancel={true} admin={true}/>
-                </div>
+                    }
+                    <div className='adminButtons'>
+                        <Button name={'Cancel'} cancel={true} admin={true}/>
+                        <Button name={'Save Changes'} cancel={true} admin={true}/>
+                    </div>
                 </div>
             </div>
         </div>

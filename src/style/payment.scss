@@ -31,7 +31,7 @@
   font-weight: 400;
   padding: 30px;
   width: 400px;
-  border-left-style: ridge;
+  border-left-style: solid;
   border-color: #2D303E;
 
   .billingHeader {
@@ -69,7 +69,7 @@
         list-style: none;
         padding: 8px 18px 8px 18px;
         border-radius: 8px;
-        border-style: ridge;
+        border-style: solid;
         border-width: thin;
         border-color: $offWhite;
         background: $body-bg1;
@@ -80,7 +80,7 @@
         list-style: none;
         padding: 8px 18px 8px 18px;
         border-radius: 8px;
-        border-style: ridge;
+        border-style: solid;
         border-width: thin;
         border-color: $offWhite;
         background: $body-bg2;

@@ -31,21 +31,14 @@ const Home = (props) => {
                 <hr/>
                 <div className='flex-split'>
                     <h2>Choose Dishes</h2>
-                    <li>
-                        <SelectOption/>
-                    </li>
+                    <li><SelectOption/></li>
                 </div>
                 {
                     (props.page === 'home') ?
-                        <div className='homeData'>
-                            <CentralData data={data} admin={false}/>
-                        </div>
+                        <CentralData data={data} admin={false}/>
                         :
-                        <div className='homeData'>
-                            <CentralData data={props.data} admin={false} />
-                        </div>
+                        <CentralData data={props.data} admin={false}/>
                 }
-
             </div>
             <FullCart isThisForConfirmPayment={false}/>
             <ModalContent/>
