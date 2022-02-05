@@ -4,17 +4,18 @@
   grid-template-columns: auto auto auto ;
   grid-gap: 20px;
   padding: 30px 10px 10px 10px;
-
+  width: 100%;
 }
 .grid-container-admin{
   display: grid;
   grid-template-columns: auto auto auto ;
-  grid-gap: 20px;
+  grid-gap: 10px;
   margin-top: 6%;
   padding: 0 10px 10px 10px;
   max-height: 53vh;
   overflow-y: scroll;
-  scrollbar-width:thin;
+  scrollbar-width:none;
+
   .addDish{
     margin: 5%;
     border-radius: 10px;

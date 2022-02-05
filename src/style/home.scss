@@ -17,7 +17,7 @@
     margin-right: 92px;
     min-height: fit-content;
     background: $body-bg2;
-    width: 75vw;
+    width: auto;
 
     .flex-split {
       display: flex;
@@ -32,7 +32,8 @@
 
       li {
         list-style: none;
-        margin-left: 56%;
+        padding-right: 1%;
+        margin-left: auto;
       }
     }
 
@@ -42,81 +43,83 @@
       padding: 0;
     }
   }
+}
 
-  .homeRightSide {
-    padding: 15px;
-    width: 400px;
 
-    .flex-row-list {
-      color: $offWhite;
-      width: 100%;
+.homeRightSide {
+  padding: 15px;
+  width: auto;
+
+  .flex-row-list {
+    color: $offWhite;
+    width: auto;
+    display: flex;
+    list-style: none;
+    padding-left: 4%;
+
+    .toRight {
+      margin-right: 5px;
       display: flex;
-      list-style: none;
-      padding-left: 10%;
-
-      .toRight {
-        margin-right: 5px;
-        display: flex;
-        margin-left: auto;
-
-        li {
-          padding-right: 47px;
-          color: $offWhite;
-        }
-      }
-    }
-
-    h2 {
-      color: $appWhite;
-      text-align: left;
-      font-weight: 400;
-      font-size: 20px;
-      padding: 5px 0 0 20px;
-    }
-
-    .flex-row-home {
-      width: 100%;
-      display: flex;
-      padding: 12px 12px 12px 4px;
+      margin-left: auto;
 
       li {
-        list-style: none;
-        margin-left: 14px;
-        color: $appWhite;
-        font-weight: 300;
-      }
-    }
-
-    .orderList {
-      max-height: 57vh;
-      width: 100%;
-      overflow-y: scroll;
-      scrollbar-width: none;
-    }
-
-    .orderSubmitTab {
-      padding: 10px 0 0 20px;
-      text-align: left;
-      width: 95%;
-
-      p {
+        margin-left: 33%;
+        padding-right: 47px;
         color: $offWhite;
-        font-weight: 300;
-        padding-top: 10px;
       }
+    }
+  }
 
-      span {
-        float: right;
-        margin-right: 20px;
-        font-weight: 700;
-      }
+  h2 {
+    color: $appWhite;
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 5px 0 0 15px;
+  }
+
+  .flex-row-home {
+    width: 100%;
+    display: flex;
+    padding: 12px 12px 12px 0;
+
+    li {
+      list-style: none;
+      margin-left: 14px;
+      color: $appWhite;
+      font-weight: 300;
+    }
+  }
+
+  .orderList {
+    max-height: 57vh;
+    width: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+
+  .orderSubmitTab {
+    padding: 10px 0 0 20px;
+    text-align: left;
+    width: 98%;
+
+    p {
+      color: $offWhite;
+      font-weight: 300;
+      padding-top: 10px;
+    }
+
+    span {
+      float: right;
+      margin-right: 20px;
+      font-weight: 700;
     }
   }
 }
 
 .topSection {
-  padding: 5px 36px 5px 25px;
-  height: 14vh;
+  padding: 5px 30px 0 25px;
+  height: auto;
   text-align: left;
 
   .dropDownIcon {
@@ -150,7 +153,6 @@
 
   .rightSide {
     float: right;
-    padding-right: 15px;
 
     button {
       cursor: pointer;

@@ -60,7 +60,7 @@ const FullCart = (props) => {
                 <p>Discount <span>$0</span></p>
                 <p>SubTotal <span>${getBasketTotal(Cart).toFixed(2)}</span></p>
             </div>
-            <div style={{padding: '20px'}}>
+            <div style={{padding: '20px 2px 0 20px'}}>
                 {
                     (!props.isThisForConfirmPayment) ?
                         <Button name={'Continue To Payment'} cancel={false} admin={false}/>
