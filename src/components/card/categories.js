@@ -30,8 +30,7 @@ const Categories = (props) => {
                         {props.keys}
                     </Link>
             }
-
-            <hr/><br/><br/>
+            <hr/>
         </div>
     )
 }
