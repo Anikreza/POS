@@ -18,7 +18,7 @@ const ModalContent = () => {
     const customStyles = {
         content: {
             top: '56%',
-            left: '72%',
+            left: '67%',
             right: 'auto',
             bottom: '-70%',
             marginRight: '-50%',
